@@ -14,9 +14,9 @@ namespace GoldenEye_XBLA_Map_Updater
 {
     public partial class Main : Form
     {
-        private const string VERSION = "1.0";
-        private const string API_URL = "https://api.github.com/repos/RetroDriven/GE-XBLA-Map-Updater/releases";
-        private const string RELEASE_URL = "https://github.com/RetroDriven/GE-XBLA-Map-Updater/releases/latest";
+        private const string VERSION = "1.0.0";
+        private const string API_URL = "https://api.github.com/repos/RetroDriven/GoldenEye-XBLA-Map-Updater/releases";
+        private const string RELEASE_URL = "https://github.com/RetroDriven/GoldenEye-XBLA-Map-Updater/releases/latest";
 
         private const string Xenia_URL = "https://github.com/AdrianCassar/xenia-canary/releases/latest";
         private const string Graslu_URL = "https://youtu.be/jzpCpA-M_pU?si=wI5Z8X9ZtB8xizLt";
@@ -73,6 +73,7 @@ namespace GoldenEye_XBLA_Map_Updater
                     try
                     {
                         Update_Available.Visible = true;
+                        Update_Available.Enabled = true;
                     }
                     catch
                     {
@@ -93,7 +94,7 @@ namespace GoldenEye_XBLA_Map_Updater
                     RequestUri = new Uri(API_URL)
 
                 };
-                var agent = new ProductInfoHeaderValue("GE-XBLA-Map-Updater", "1.0");
+                var agent = new ProductInfoHeaderValue("GoldenEye-XBLA-Map-Updater", "1.0");
                 request.Headers.UserAgent.Add(agent);
                 var response = await client.SendAsync(request).ConfigureAwait(false);
                 response.EnsureSuccessStatusCode();
@@ -364,6 +365,11 @@ namespace GoldenEye_XBLA_Map_Updater
             Status.Text = "Downloading Map Updates...";
             DownloadUpdates();
 
+        }
+
+        private void Update_Available_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer", RELEASE_URL);
         }
     }
 }

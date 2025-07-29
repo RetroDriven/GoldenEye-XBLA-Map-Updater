@@ -176,6 +176,7 @@
             Update_Available.TabIndex = 7;
             Update_Available.Text = "App Update Available!";
             Update_Available.Visible = false;
+            Update_Available.Click += Update_Available_Click;
             // 
             // No_Internet
             // 
