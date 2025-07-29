@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>GoldenEye_XBLA_Map_Updater</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+	  <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+	  <Authors>RetroDriven</Authors>
+	  <Copyright>2025 - RetroDriven</Copyright>
+	  <PackageIcon>png_clipart_james_bond_film_series_bond_girl_james_bond_love_logo_modified_Lwx_icon.png</PackageIcon>
+	  <FileVersion>2025.7.29.1</FileVersion>
+	  <ApplicationIcon>png_clipart_james_bond_film_series_bond_girl_james_bond_love_logo_modified_Lwx_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="png_clipart_james_bond_film_series_bond_girl_james_bond_love_logo_modified_Lwx_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Fody" Version="6.9.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="png_clipart_james_bond_film_series_bond_girl_james_bond_love_logo_modified_Lwx_icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
